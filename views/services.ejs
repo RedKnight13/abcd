@@ -1,0 +1,95 @@
+<div id="main">
+    <div class="inner">
+        <h1>Services</h1>
+
+        <span class="image main"><img src="images/pic12.jpg" alt="" /></span>
+        <h2>Sign in</h2>
+        <section>
+            <div class="col-6 col-12-xsmall">
+                <input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
+            </div>
+            <div class="col-6 col-12-xsmall">
+                <input type="password" name="demo-name" id="demo-pass" value="" placeholder="Password" />
+            </div>
+            <div class="col-12">
+                <ul class="actions">
+                    <li><input type="submit" value="Sign in" id="submit"class="primary" onclick="validate()" /></li>
+                    <li><input type="reset" value="Forgot Password" /></li>
+
+                </ul>
+                
+
+        </section>
+        <h2>Sign Up</h2>
+        <section>
+    
+                <form method="post" action="#">
+                    <div class="row gtr-uniform">
+                        <div class="col-6 col-12-xsmall">
+                            <input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
+                        </div>
+                        <div class="col-6 col-12-xsmall">
+                            <input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
+                        </div>
+                        <div class="col-12">
+                            <select name="demo-category" id="demo-category">
+                                <option value="">- Category -</option>
+                                <option value="1">Student</option>
+                                <option value="1">Graduate</option>
+                                <option value="1">Professional</option>
+                                <option value="1">Academician</option>
+                            </select>
+                        </div>
+                        <div class="col-6 col-12-xsmall">
+                                <input type="password" name="demo-name" id="demo-pass" value="" placeholder="Password" />
+                            </div>
+                            <div class="col-6 col-12-xsmall">
+                                <input type="password" name="demo-email" id="demo-pass" value="" placeholder="Confirm Password" />
+                            </div>
+                        
+                        <div class="col-6 col-12-small">
+                            <input type="checkbox" id="demo-copy" name="demo-copy">
+                            <label for="demo-copy">Email me a copy</label>
+                        </div>
+                        <div class="col-6 col-12-small">
+                            <input type="checkbox" id="demo-human" name="demo-human" checked>
+                            <label for="demo-human">Not a robot</label>
+                        </div>
+                        <div class="col-12">
+                            <textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
+                        </div>
+                        <div class="col-12">
+                            <ul class="actions">
+                                <li><input type="submit" value="Register" class="primary" /></li>
+                                <li><input type="reset" value="Reset" /></li>
+                            </ul>
+                        </div>
+                    </div>
+                </form>
+            </section>
+        
+        
+</div>
+
+<script type="text/javascript">
+var attempt = 5; 
+function validate(){
+var username = document.getElementById("demo-email").value;
+var password = document.getElementById("demo-pass").value;
+if ( username == "athil@gmail.com" && password == "athil@123"){
+alert ("Login successfully");
+
+return false;
+}
+else{
+attempt --;
+alert("You have left "+attempt+" attempt;");
+if( attempt == 0){
+document.getElementById("demo-email").disabled = true;
+document.getElementById("demo-pass").disabled = true;
+document.getElementById("submit").disabled = true;
+return false;
+}
+}
+}
+</script>
